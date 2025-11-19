@@ -35,6 +35,7 @@ if [[ $XDG_SESSION_TYPE == "wayland" && -z "$DISPLAY" ]]; then
     FLAGS+=(--enable-wayland-ime)
     FLAGS+=(--wayland-text-input-version=3)
 else
+    FLAGS+=(--ozone-platform=x11)
     echo "Running on X11"
 fi
 
